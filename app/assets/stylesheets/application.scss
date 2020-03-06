@@ -1,0 +1,16 @@
+//reset & config
+@import "reset";
+@import "config/colors";
+//modules
+@import "modules/posts";
+@import "modules/user";
+@import "modules/flash";
+//projets
+@import "projects/header";
+@import "projects/postszone";
+@import "projects/postsbtn";
+//font
+@import 'font-awesome-sprockets';
+@import "font-awesome";
+
+

@@ -1,0 +1,19 @@
+.headernav
+  .headeruppercontent
+    .headeruppercontent__title
+      Tripper
+  .headerusericon
+    %text
+      = current_user.name
+
+  .headerundercontent
+    .headerundercontent__btn
+      .headerundercontent__btn--regist
+        新規登録
+      .headerundercontent__btn--login
+        -# = link_to ,new_user_registration_path,
+        ログイン
+      .headerundercontent__btn--useredit
+        = link_to edit_user_path(current_user) do
+          編集
+        
