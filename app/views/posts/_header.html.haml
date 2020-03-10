@@ -1,6 +1,7 @@
 .headernav
   .headeruppercontent
     .headeruppercontent__title
+      %i.fa.fa-plane
       Tripper
   .headerusericon
     %text
@@ -9,7 +10,8 @@
   .headerundercontent
     .headerundercontent__btn
       .headerundercontent__btn--regist
-        新規登録
+        = link_to new_user_registration_path do
+          新規登録
       .headerundercontent__btn--login
         -# = link_to ,new_user_registration_path,
         ログイン
