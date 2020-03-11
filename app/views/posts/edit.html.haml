@@ -1,0 +1,8 @@
+= render "header"
+.form
+  = form_for [@post] do |f|
+    .form__mask
+      = f.label :image, class: 'form__mask__image' do
+        = f.file_field :image, class: 'hidden'
+    = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+    = f.submit 'Send', class: 'form__submit'
