@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
 
+  before_action :post_find, only: [:edit, :show]
+  before_action :move_to_index, except: [:index, :show]
+
   def index
     @posts = Post.all
 
@@ -22,7 +25,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+ 
   end
 
   def update
@@ -32,13 +35,20 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    
   end
 
 
   private
   def post_params
-    params.require(:post).permit(:content, :image)
+    params.require(:post).permit(:content, :image, :name)
   end
 
+  def post_find
+    @post = Post.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
+  end
 end

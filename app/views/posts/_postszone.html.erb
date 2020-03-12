@@ -1,5 +1,6 @@
 <div class="contents row">
   <% @posts.each do |post| %>
+      <%= simple_format(post.name) %>
     <div class="content_post" style="background-image: url(<%= post.image %>);">
       <div class="more">
         <span><%= image_tag 'arrow_top.png' %></span>

@@ -9,13 +9,15 @@
 
   .headerundercontent
     .headerundercontent__btn
-      .headerundercontent__btn--regist
-        = link_to new_user_registration_path do
-          新規登録
-      .headerundercontent__btn--login
-        -# = link_to ,new_user_registration_path,
-        ログイン
+    - if user_signed_in?
       .headerundercontent__btn--useredit
         = link_to edit_user_path(current_user) do
-          編集
+          ログアウト
+    - else 
+      .headerundercontent__btn--regist
+        = link_to '/users/sign_up' do
+          新規登録
+      .headerundercontent__btn--login
+        = link_to '/users/sign_in' do
+          ログイン
         
