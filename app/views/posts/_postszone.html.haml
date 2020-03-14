@@ -1,10 +1,11 @@
 .contentswrapper
   - @posts.each do |post|
-    .content_post{:style => "background-image: url(#{post.image});"}
-      = simple_format(post.name)
-      %span= image_tag 'arrow_top.png'
-      = simple_format(post.content)
-      .more
+    .contents{:style => "background-image: url(#{post.image});"}
+      .contents__post
+        = simple_format(post.name)
+        %span= image_tag 'arrow_top.png'
+        = simple_format(post.content)
+      .contents__more
         %ul.more_list
           %li
             = link_to '詳細', "/posts/#{post.id}", method: :get
