@@ -1,6 +1,8 @@
 .contentswrapper
   - @posts.each do |post|
-    .contents{:style => "background-image: url(#{post.image});"}
+    -# = binding.pry
+    .contents
+      = image_tag post.image.url
       .contents__post
         %span= image_tag 'arrow_top.png'
         = simple_format(post.content)
