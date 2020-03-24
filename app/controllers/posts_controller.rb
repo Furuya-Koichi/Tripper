@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.includes(:user)
+    @posts = Post.includes(:user).order("created_at DESC")
 
   end
 
@@ -35,6 +35,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def search
+    #Viewのformで取得したパラメータをモデルに渡す
+    @posts = Post.search(params[:keyword])
+  end
 
   private
   def post_params
