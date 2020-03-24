@@ -9,12 +9,15 @@
 
   .headerundercontent
     .headerundercontent__btn
-      .headerundercontent__btn--regist
-        - if user_signed_in?
+      - if user_signed_in?
+        .headerundercontent__btn--logout
           = link_to "ログアウト", destroy_user_session_path, method: :delete
+        .headerundercontent__btn--mypage
           = link_to "マイページ", "/users/#{current_user.id}"
-        - else
+      - else
+        .headerundercontent__btn--logout
           = link_to "ログイン", new_user_registration_path, class: 'post'
+        .headerundercontent__btn--logout
           = link_to "新規登録", new_user_registration_path, class: 'post'
       -# - if user_signed_in?
       -#   .headerundercontent__btn--useredit
