@@ -1,15 +1,19 @@
 = render "header"
 .contentswrapper
   - @posts.each do |post|
-    .contents{:style => "background-image: url(#{post.image});"}
+    .contents
+      .uppercontents
+        .uppercontents__usericon
+          %text
+          = post.user.name
+        .uppercontents__more
+          %ul.more_list
+            %li
+              = link_to '詳細', "/posts/#{post.id}", method: :get
+            %li
+              = link_to '編集', "/posts/#{post.id}/edit", method: :get
+            %li
+              = link_to '削除', "/posts/#{post.id}", method: :delete
+      = image_tag post.image.url
       .contents__post
-        %span= image_tag 'arrow_top.png'
         = simple_format(post.content)
-      .contents__more
-        %ul.more_list
-          %li
-            = link_to '詳細', "/posts/#{post.id}", method: :get
-          %li
-            = link_to '編集', "/posts/#{post.id}/edit", method: :get
-          %li
-            = link_to '削除', "/posts/#{post.id}", method: :delete
