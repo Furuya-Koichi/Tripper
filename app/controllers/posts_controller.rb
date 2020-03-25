@@ -36,7 +36,6 @@ class PostsController < ApplicationController
   end
 
   def search
-    #Viewのformで取得したパラメータをモデルに渡す
     @posts = Post.search(params[:keyword])
   end
 
