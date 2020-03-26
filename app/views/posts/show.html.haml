@@ -6,6 +6,7 @@
         %text
         = @post.user.name
       .uppercontents__more
+      - if user_signed_in?
         %ul.more_list
           %li
             = link_to '詳細', "/posts/#{@post.id}", method: :get
