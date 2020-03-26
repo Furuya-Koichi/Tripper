@@ -14,10 +14,11 @@
             %li
               = link_to '削除', "/posts/#{post.id}", method: :delete
             %li
+      .contents__country
+        = post.country
       = image_tag post.image.url
       .contents__post
-        = simple_format(post.content)
-
+        = post.content
 
 
 
