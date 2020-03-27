@@ -14,8 +14,10 @@
               = link_to '編集', "/posts/#{post.id}/edit", method: :get
             %li
               = link_to '削除', "/posts/#{post.id}", method: :delete
+            %li
       .contents__country
-        = post.country
-      = image_tag post.image.url
+        %a
+          = post.country
+      = image_tag post.image
       .contents__post
         = simple_format(post.content)
