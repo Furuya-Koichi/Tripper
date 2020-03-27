@@ -16,12 +16,15 @@
               = link_to '削除', "/posts/#{post.id}", method: :delete
             %li
       .contents__country
-        = post.country
+        %a
+          = post.country
       = image_tag post.image.url
       .contents__post
         = post.content
-
-
+      = post.travelexpenses_id
+-#       = post.travelexpenses_id.name
+-#       -# = post.images.first.image_url.to_s unless @item.images.blank?
+-# -#  = Category.find(@item.category_id).name
 
 
 
