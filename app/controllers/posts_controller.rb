@@ -36,13 +36,12 @@ class PostsController < ApplicationController
   end
 
   def search
-    #Viewのformで取得したパラメータをモデルに渡す
     @posts = Post.search(params[:keyword])
   end
 
   private
   def post_params
-    params.require(:post).permit(:content, :image).merge(user_id: current_user.id)
+    params.require(:post).permit(:content, :image, :travelexpenses_id, :country).merge(user_id: current_user.id)
   end
 
 end

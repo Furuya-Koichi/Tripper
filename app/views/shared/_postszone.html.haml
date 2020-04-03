@@ -6,6 +6,7 @@
           %text
           = post.user.name
         .uppercontents__more
+        - if user_signed_in?
           %ul.more_list
             %li
               = link_to '詳細', "/posts/#{post.id}", method: :get
@@ -14,12 +15,16 @@
             %li
               = link_to '削除', "/posts/#{post.id}", method: :delete
             %li
-      = image_tag post.image.url
+      .contents__country
+        %a
+          = post.country
+      = image_tag post.image
       .contents__post
-        = simple_format(post.content)
-
-
-
+        = post.content
+      = post.travelexpenses_id
+-#       = post.travelexpenses_id.name
+-#       -# = post.images.first.image_url.to_s unless @item.images.blank?
+-# -#  = Category.find(@item.category_id).name
 
 
 
