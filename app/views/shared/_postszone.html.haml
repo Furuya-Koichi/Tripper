@@ -2,9 +2,9 @@
   - @posts.each do |post|
     .contents
       .uppercontents
-        .uppercontents__usericon
-          %text
-          = current_user&.name
+        -# .uppercontents__usericon
+        -#   %text
+        -#   = post.user.name
         .uppercontents__more
         - if user_signed_in?
           %ul.more_list
