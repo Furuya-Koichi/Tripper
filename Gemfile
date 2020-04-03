@@ -57,3 +57,6 @@ gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-rails'
+# デバック用
+gem 'better_errors'
+gem 'binding_of_caller'
