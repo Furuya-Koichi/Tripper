@@ -64,3 +64,7 @@ gem 'binding_of_caller'
 group :production do
   gem 'unicorn', '5.4.1'
 end
+#SNS認証
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
+gem 'ancestry'

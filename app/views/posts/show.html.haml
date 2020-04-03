@@ -2,14 +2,12 @@
 .contentswrapper
   .contents
     .uppercontents
-      .uppercontents__usericon
-        %text
-        = @post.user.name
+      -# .uppercontents__usericon
+      -#   %text
+      -#   = @post.user.name
       .uppercontents__more
       - if user_signed_in?
         %ul.more_list
-          %li
-            = link_to '詳細', "/posts/#{@post.id}", method: :get
           %li
             = link_to '編集', "/posts/#{@post.id}/edit", method: :get
           %li
