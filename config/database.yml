@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: Tripper_production
-  username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock' (2)
+  username: Tripper
+  password: <%= ENV['TRIPPER_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
