@@ -60,3 +60,7 @@ gem 'pry-rails'
 # デバック用
 gem 'better_errors'
 gem 'binding_of_caller'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
