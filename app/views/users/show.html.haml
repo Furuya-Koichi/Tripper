@@ -4,17 +4,20 @@
     .contents
       .uppercontents
         .uppercontents__usericon
-          %text
-          = post.user.name
+          -# %text
+          -# = post.user.name
         .uppercontents__more
-          %ul.more_list
-            %li
-              = link_to '詳細', "/posts/#{post.id}", method: :get
-            %li
-              = link_to '編集', "/posts/#{post.id}/edit", method: :get
-            %li
-              = link_to '削除', "/posts/#{post.id}", method: :delete
-            %li
+          .menubar
+            %label
+              %i.fa.fa-ellipsis-h
+              %input.acordion{:id => "list", :type => "checkbox"}
+              %ul
+                %li
+                  = link_to '詳細', "/posts/#{post.id}", method: :get
+                %li
+                  = link_to '編集', "/posts/#{post.id}/edit", method: :get
+                %li
+                  = link_to '削除', "/posts/#{post.id}", method: :delete
       .contents__country
         %a
           = post.country
