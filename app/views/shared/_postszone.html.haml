@@ -2,18 +2,22 @@
   - @posts.each do |post|
     .contents
       .uppercontents
-        -# .uppercontents__usericon
+        .uppercontents__usericon
         -#   %text
         -#   = post.user.name
         .uppercontents__more
         - if user_signed_in?
-          %ul.more_list
-            %li
-              = link_to '詳細', "/posts/#{post.id}", method: :get
-            %li
-              = link_to '編集', "/posts/#{post.id}/edit", method: :get
-            %li
-              = link_to '削除', "/posts/#{post.id}", method: :delete
+          .menubar
+            %label
+              %i.fa.fa-ellipsis-h
+              %input.acordion{:id => "list", :type => "checkbox"}
+              %ul
+                %li
+                  = link_to '詳細', "/posts/#{post.id}", method: :get
+                %li
+                  = link_to '編集', "/posts/#{post.id}/edit", method: :get
+                %li
+                  = link_to '削除', "/posts/#{post.id}", method: :delete
       .contents__country
         %a
           = post.country
@@ -23,13 +27,6 @@
       .contents__post
         = post.content
       = post.travelexpenses_id
--#       = post.travelexpenses_id.name
--#       -# = post.images.first.image_url.to_s unless @item.images.blank?
--# -#  = Category.find(@item.category_id).name
-
-
-
-
 
 
 
