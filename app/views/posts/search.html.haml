@@ -3,9 +3,9 @@
   - @posts.each do |post|
     .contents
       .uppercontents
-        .uppercontents__usericon
-          %text
-          = post.user.name
+        -# .uppercontents__usericon
+        -#   %text
+        -#   = post.user.name
         .uppercontents__more
           %ul.more_list
             %li
@@ -18,5 +18,7 @@
       .contents__country
         = post.country
       = image_tag post.image.url
+      .contents__time
+        = post.created_at.strftime("%Y-%m-%d")
       .contents__post
         = post.content

@@ -18,6 +18,8 @@
         %a
           = post.country
       = image_tag post.image
+      .contents__time
+        = post.created_at.strftime("%Y-%m-%d")
       .contents__post
         = post.content
       = post.travelexpenses_id
