@@ -2,11 +2,16 @@
   width: 100%
   border-bottom: 1px solid #e1dfe2
   display: flex
+  justify-content: space-between
   .headeruppercontent
-    padding: 20px
-    margin: auto
+    display: flex
+    margin-left: 20px
     &__title
-      font-size: 30px
+      margin-bottom: 10px
+      font-size: 25px
+      margin-left: 250px
+      margin-top: 20px
+      padding-right: 300px
       br
         font-size: 10px
       i
@@ -14,23 +19,15 @@
       a
         text-decoration: none
         color: black
-  .headerusericon
-    bottom: -14px
-    right:  -14px
-    z-index: 1000
-    width: 60px
-    height: 60px
-    border-radius: 50%
-    text-align: center
-    text-decoration: none
-    background-color: skyblue
-    color: white
-    padding: 15px 0px
 
   .headerundercontent
+    display: flex
+    margin-right: 300px
     &__btn
-      display: flex
-      margin: 20px
+      margin-top: 10px
+      a
+        text-decoration: none
+        color: #333333
       &--logout
         background-color: #efefef
         cursor: pointer
@@ -38,8 +35,7 @@
         font-size: 14px
         font-weight: 600
         border-radius: 15px
-        padding: 8px 16px
-        color: #333333
+        padding: 6px 12px
         margin: 0px 10px 0px 10px
       &--mypage
         background-color: #efefef
@@ -48,8 +44,7 @@
         font-size: 14px
         font-weight: 600
         border-radius: 15px
-        padding: 8px 16px
-        color: #333333
+        padding: 6px 12px
       &--login
         background-color: #efefef
         cursor: pointer
@@ -58,15 +53,14 @@
         font-weight: 600
         border-radius: 15px
         padding: 8px 16px
-        color: #333333
         background-color: #efefef
         cursor: pointer
         display: inline-block
         font-size: 14px
         font-weight: 600
         border-radius: 15px
-        padding: 8px 16px
-        color: #333333
+        padding: 6px 12px
+
       &--search
         background-color: #efefef
         cursor: pointer
@@ -74,7 +68,7 @@
         font-size: 14px
         font-weight: 600
         border-radius: 15px
-        padding: 8px 16px
+        padding: 6px 12px
         color: #333333
       &--useredit 
         background-color: #efefef
@@ -83,5 +77,16 @@
         font-size: 14px
         font-weight: 600
         border-radius: 15px
-        padding: 8px 16px
+        padding: 6px 12px
         color: #333333
+    .headerusericon
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      text-align: center
+      text-decoration: none
+      background-color: skyblue
+      color: white
+      padding: 10px 0px
+      margin-right: 20px
+      overflow: scroll
