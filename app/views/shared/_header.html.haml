@@ -3,11 +3,12 @@
     .headeruppercontent__title
       %i.fa.fa-plane
       = link_to "Tripper",root_path
-  .headerusericon
-    %text
-      = current_user&.name
-
+    .headersearch
+      = render "./shared/search"
   .headerundercontent
+    .headerusericon
+      %text
+        = current_user&.name
     .headerundercontent__btn
       - if user_signed_in?
         .headerundercontent__btn--logout
