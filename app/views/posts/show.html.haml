@@ -2,9 +2,9 @@
 .contentswrapper
   .contents
     .uppercontents
-      -# .uppercontents__usericon
-      -#   %text
-      -#   = @post.user.name
+      .uppercontents__usericon
+        %text
+        = @post.user.name
       .uppercontents__more
       - if user_signed_in?
         .menubar
