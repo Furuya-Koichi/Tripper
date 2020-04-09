@@ -30,4 +30,6 @@
 ○ haml導入: 'haml-rails'  
 ○ フォントデザイン： 'font-awesome-sass'
 
-#DB構造
+# DB構造
+<img width="1072" alt="スクリーンショット 2020-04-09 21 25 35" src="https://user-images.githubusercontent.com/57896659/78895062-23636680-7aa9-11ea-916a-180a9bee1835.png">
+
