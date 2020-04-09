@@ -24,5 +24,5 @@
 ○ 新規登録、ログイン時のSNS認証:　 'omniauth-google-oauth2',  "omniauth-rails_csrf_protection"  
 ○ 認証機能: 'devise'  
 ○ アプリケーションサーバー: 'unicorn'  
-○ 画像投稿: 'carrierwave', 'mini_magick'
+○ 画像投稿: 'carrierwave', 'mini_magick'  
 ○　haml導入: 'haml-rails'
