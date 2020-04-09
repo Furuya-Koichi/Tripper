@@ -29,3 +29,6 @@
 ○ 画像投稿: 'carrierwave', 'mini_magick'  
 ○ haml導入: 'haml-rails'  
 ○ フォントデザイン： 'font-awesome-sass'
+
+#DB構造
+
