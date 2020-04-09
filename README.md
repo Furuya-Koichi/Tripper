@@ -19,3 +19,10 @@
 ○ 投稿の編集、削除機能  
 ○ 投稿検索機能  
 ○ マイページ閲覧機能  
+
+# 使用したgem
+○ 新規登録、ログイン時のSNS認証:　 'omniauth-google-oauth2',  "omniauth-rails_csrf_protection"  
+○ 認証機能: 'devise'  
+○ アプリケーションサーバー: 'unicorn'  
+○ 画像投稿: 'carrierwave', 'mini_magick'
+○　haml導入: 'haml-rails'
