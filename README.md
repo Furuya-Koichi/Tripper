@@ -1,7 +1,7 @@
 # SNS型旅行共有アプリ（Tripper）について
 <img width="1277" alt="スクリーンショット 2020-04-09 19 31 55" src="https://user-images.githubusercontent.com/57896659/78889043-dcbc3f00-7a9d-11ea-94ac-12c0a3d7e118.png">
 
-<img width="1277" alt="スクリーンショット 2020-04-09 19 38 14" src="https://user-images.githubusercontent.com/57896659/78889219-358bd780-7a9e-11ea-85ac-1474f34291ed.png">
+
 
 
 ### ①はじめに 
