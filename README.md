@@ -22,6 +22,12 @@
 ○ 投稿検索機能  
 ○ マイページ閲覧機能  
 
+# 開発環境
+○ Ruby on Rails  
+○ haml/sass  
+○ MySQL  
+○ Github  
+
 # 使用したgem
 ○ 新規登録、ログイン時のSNS認証:　 'omniauth-google-oauth2',  "omniauth-rails_csrf_protection"  
 ○ 認証機能: 'devise'  
@@ -32,4 +38,3 @@
 
 # DB構造
 <img width="1072" alt="スクリーンショット 2020-04-09 21 25 35" src="https://user-images.githubusercontent.com/57896659/78895062-23636680-7aa9-11ea-916a-180a9bee1835.png">
-
