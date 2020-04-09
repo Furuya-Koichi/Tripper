@@ -31,4 +31,3 @@
 ○ フォントデザイン： 'font-awesome-sass'
 
 #DB構造
-
