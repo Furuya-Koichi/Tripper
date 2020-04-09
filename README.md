@@ -25,4 +25,4 @@
 ○ 認証機能: 'devise'  
 ○ アプリケーションサーバー: 'unicorn'  
 ○ 画像投稿: 'carrierwave', 'mini_magick'  
-○　haml導入: 'haml-rails'
+○ haml導入: 'haml-rails'
