@@ -1,1 +1,1 @@
-# SNS型旅行共有アプリ（Tripper）について
+## SNS型旅行共有アプリ（Tripper）について
