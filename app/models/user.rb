@@ -7,6 +7,8 @@ class User < ApplicationRecord
          has_many :sns_credentials
          has_many :posts
          has_many :comments  # commentsテーブルとのアソシエーション
+         has_many :likes, dependent: :destroy # いいね機能
+         has_many :liked_posts, through: :likes, source: :post # いいね機能
   validates :name, presence: true
 
 
@@ -21,5 +23,9 @@ class User < ApplicationRecord
       sns.save
     end
     { user: user, sns: sns }
+  end
+#いいね機能
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
   end
 end

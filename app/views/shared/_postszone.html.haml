@@ -23,14 +23,20 @@
           = post.country
       = image_tag post.image
       .undercontents
-        .undercontents__time
-          = post.created_at.strftime("%Y-%m-%d")
-        .undercontents__travelexpenses
-          旅費：
+        .undercontentsupper
+          .undercontentsupper__likecount
+            %i.fa.fa-thumbs-up
+            = post.liked_users.count
+          .undercontentsupper__time
+            %i.fa.fa-clock
+            = post.created_at.strftime("%Y-%m-%d")
+        .undercontents__travelexpense
+          %i.fa.fa-yen-sign
           = post.travelexpense
           円
         .undercontents__post
           = post.content
+
 
 
 

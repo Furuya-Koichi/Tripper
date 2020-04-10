@@ -21,21 +21,38 @@
         = @post.country
     = image_tag @post.image
     .undercontents
-      .undercontents__time
-        = @post.created_at.strftime("%Y-%m-%d")
+      .undercontentsupper
+        .undercontentsupper__likecount
+          - if current_user.already_liked?(@post)
+            = button_to post_like_path(@post), method: :delete do
+              %i.fa.fa-thumbs-up
+              = @post.likes.count 
+          - else
+            = button_to post_likes_path(@post) do
+              %i.fa.fa-thumbs-up
+              = @post.likes.count 
+        .undercontentsupper__time
+          %i.fa.fa-clock
+          = @post.created_at.strftime("%Y-%m-%d")
       .undercontents__travelexpense
+        %i.fa.fa-yen-sign
         = @post.travelexpense
         円
       .undercontents__post
         = @post.content
+      -# %h2 いいねしたユーザー
+      -# - @post.liked_users.each do |user|
+      -#   %li
+      -#     = user.name
 
-  .container
-    - if current_user
-      -# = form_for[@post, @comment] do |f|
-      -#   = form.text_area :comment, placeholder: "コメントする", rows: "2"
-      -#   = form.submit "SEND"
-    - else
-      %strong
-        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+
+  -# .container
+  -#   - if current_user
+  -#     -# = form_for[@post, @comment] do |f|
+  -#     -#   = form.text_area :comment, placeholder: "コメントする", rows: "2"
+  -#     -#   = form.submit "SEND"
+  -#   - else
+  -#     %strong
+  -#       %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
 
 
