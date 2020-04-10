@@ -33,6 +33,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    #いいね機能
+    @like = Like.new
   end
 
   def search

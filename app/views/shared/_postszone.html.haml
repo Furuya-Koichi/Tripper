@@ -23,6 +23,9 @@
           = post.country
       = image_tag post.image
       .undercontents
+        .undercontents__like
+          %i.fa.fa-thumbs-up
+          = post.liked_users.count
         .undercontents__time
           = post.created_at.strftime("%Y-%m-%d")
         .undercontents__travelexpenses
@@ -31,6 +34,7 @@
           円
         .undercontents__post
           = post.content
+
 
 
 
