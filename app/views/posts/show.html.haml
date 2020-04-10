@@ -21,18 +21,19 @@
         = @post.country
     = image_tag @post.image
     .undercontents
-      .undercontents__likecount
-      - if current_user.already_liked?(@post)
-        = button_to post_like_path(@post), method: :delete do
-          %i.fa.fa-thumbs-up
-          = @post.likes.count 
-      - else
-        = button_to post_likes_path(@post) do
-          %i.fa.fa-thumbs-up
-          = @post.likes.count 
-      .undercontents__time
-        %i.fa.fa-clock
-        = @post.created_at.strftime("%Y-%m-%d")
+      .undercontentsupper
+        .undercontentsupper__likecount
+          - if current_user.already_liked?(@post)
+            = button_to post_like_path(@post), method: :delete do
+              %i.fa.fa-thumbs-up
+              = @post.likes.count 
+          - else
+            = button_to post_likes_path(@post) do
+              %i.fa.fa-thumbs-up
+              = @post.likes.count 
+        .undercontentsupper__time
+          %i.fa.fa-clock
+          = @post.created_at.strftime("%Y-%m-%d")
       .undercontents__travelexpense
         %i.fa.fa-yen-sign
         = @post.travelexpense

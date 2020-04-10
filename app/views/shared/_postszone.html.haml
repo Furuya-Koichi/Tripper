@@ -23,12 +23,13 @@
           = post.country
       = image_tag post.image
       .undercontents
-        .undercontents__likecount
-          %i.fa.fa-thumbs-up
-          = post.liked_users.count
-        .undercontents__time
-          %i.fa.fa-clock
-          = post.created_at.strftime("%Y-%m-%d")
+        .undercontentsupper
+          .undercontentsupper__likecount
+            %i.fa.fa-thumbs-up
+            = post.liked_users.count
+          .undercontentsupper__time
+            %i.fa.fa-clock
+            = post.created_at.strftime("%Y-%m-%d")
         .undercontents__travelexpense
           %i.fa.fa-yen-sign
           = post.travelexpense
