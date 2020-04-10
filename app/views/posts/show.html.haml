@@ -12,6 +12,7 @@
             %i.fa.fa-ellipsis-h
             %input.acordion{:id => "list", :type => "checkbox"}
             %ul
+            - if user_signed_in? && current_user.id == @post.user_id
               %li
                 = link_to '編集', "/posts/#{@post.id}/edit", method: :get
               %li
