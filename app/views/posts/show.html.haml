@@ -21,20 +21,24 @@
         = @post.country
     = image_tag @post.image
     .undercontents
+      .undercontents__likecount
+      - if current_user.already_liked?(@post)
+        = button_to post_like_path(@post), method: :delete do
+          %i.fa.fa-thumbs-up
+          = @post.likes.count 
+      - else
+        = button_to post_likes_path(@post) do
+          %i.fa.fa-thumbs-up
+          = @post.likes.count 
       .undercontents__time
+        %i.fa.fa-clock
         = @post.created_at.strftime("%Y-%m-%d")
       .undercontents__travelexpense
+        %i.fa.fa-yen-sign
         = @post.travelexpense
         円
       .undercontents__post
         = @post.content
-      .undercontents__like
-        いいね件数:
-        = @post.likes.count 
-      - if current_user.already_liked?(@post)
-        = button_to 'いいねを取り消す', post_like_path(@post), method: :delete
-      - else
-        = button_to 'いいね', post_likes_path(@post)
       -# %h2 いいねしたユーザー
       -# - @post.liked_users.each do |user|
       -#   %li
