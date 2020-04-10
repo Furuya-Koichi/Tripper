@@ -37,4 +37,4 @@
 ○ フォントデザイン： 'font-awesome-sass'
 
 # DB構造
-<img width="1072" alt="スクリーンショット 2020-04-09 21 25 35" src="https://user-images.githubusercontent.com/57896659/78895062-23636680-7aa9-11ea-916a-180a9bee1835.png">
+<img width="1044" alt="スクリーンショット 2020-04-10 23 31 31" src="https://user-images.githubusercontent.com/57896659/78998740-3434da80-7b84-11ea-97c6-01073772e017.png">
