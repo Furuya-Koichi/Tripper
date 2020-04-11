@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
          has_many :sns_credentials
          has_many :posts
-         has_many :comments  # コメント機能
+         has_many :comments, dependent: :destroy# コメント機能
          has_many :likes, dependent: :destroy # いいね機能
          has_many :liked_posts, through: :likes, source: :post # いいね機能
   validates :name, presence: true

@@ -1,10 +1,12 @@
 .contentswrapper
   margin: auto 0px
+  display: flex
   .contents
     background-color: #efefef
     height: 846px
     width: 600px
-    margin: 20px 300px
+    margin: 20px
+    margin-left: 350px
     border: 1px solid #e1dfe2
     box-shadow:  0 4px 6px rgba(146, 146, 146, 0.8)
     display: inline-block
@@ -89,8 +91,67 @@
           i
             color: #5989cf
             font-size: 20px
+        &__commentcount
+          i
+            color: white
+            font-size: 20px
+            margin-left: 15px
         &__time
           margin-bottom: 8px
+      .counts
+        display: flex
+  .contentscommments
+    background-color: #efefef
+    border: 1px solid #e1dfe2
+    height: 600px
+    width: 400px
+    margin-top: 50px
+    margin-left: 50px
+    box-shadow:  0 4px 6px rgba(146, 146, 146, 0.8)
+    display: inline-block
+    padding: 10px 0px 0px 20px
+    &__show
+      height: 200px
+      .title
+        padding: 15px
+        font-size: 25px
         
-      
+      .inner
+        overflow: scroll
+        height: 250px
+        margin-bottom: 10px
+        &__time
+          font-size: 5px
+          padding-bottom: 20px
+          margin-left: 8px
+        a
+          text-decoration: none
+        .innerupper
+          display: flex
+          padding-bottom: 5px
+          &__name
+          &__content
+
+    &__form
+      display: inline-block
+      margin-top: 150px
+      input
+        width: 350px
+        height: 90px
+      .commentbtn
+        width: 100px
+        height: 100px
+        margin-top: 30px
+        border-radius: 50%
+        text-align: center
+        text-decoration: none
+        background-color: skyblue
+        color: white
+        cursor: pointer
+        box-shadow:  0 4px 8px rgba(146, 146, 146, 0.8)
+        display: inline-block
+        margin-left: 140px
+        font-size: 15px
+
+
 
