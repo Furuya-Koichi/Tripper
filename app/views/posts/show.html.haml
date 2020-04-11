@@ -12,10 +12,11 @@
             %i.fa.fa-ellipsis-h
             %input.acordion{:id => "list", :type => "checkbox"}
             %ul
-              %li
-                = link_to '編集', "/posts/#{@post.id}/edit", method: :get
-              %li
-                = link_to '削除', "/posts/#{@post.id}", method: :delete
+              - if user_signed_in? && current_user.id == @post.user_id
+                %li
+                  = link_to '編集', "/posts/#{@post.id}/edit", method: :get
+                %li
+                  = link_to '削除', "/posts/#{@post.id}", method: :delete
     .contents__country
       %a
         = @post.country
@@ -40,10 +41,18 @@
         円
       .undercontents__post
         = @post.content
-      -# %h2 いいねしたユーザー
-      -# - @post.liked_users.each do |user|
-      -#   %li
-      -#     = user.name
+  %h2 コメント一覧
+  - @comments.each do |c|
+    %div
+      %a{:href => "/users/#{@post.user.id}"}= c.user.name
+      = c.content
+      %hr/
+  = form_for [@post, @comment] do |f|
+    = f.text_field :content
+    %br/
+    = f.submit 'コメントする'
+  = link_to "ホームへ戻る", posts_path
+
 
 
   -# .container
