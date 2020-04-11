@@ -25,9 +25,13 @@
       = image_tag post.image
       .undercontents
         .undercontentsupper
-          .undercontentsupper__likecount
-            %i.fa.fa-thumbs-up
-            = post.liked_users.count
+          .counts
+            .undercontentsupper__likecount
+              %i.fa.fa-thumbs-up
+              = post.liked_users.count
+            .undercontentsupper__commentcount
+              %i.fa.fa-envelope
+              = post.comments.count
           .undercontentsupper__time
             %i.fa.fa-clock
             = post.created_at.strftime("%Y-%m-%d")
