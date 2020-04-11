@@ -34,6 +34,9 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     #いいね機能
     @like = Like.new
+    #コメント機能
+    @comments = @post.comments
+    @comment = Comment.new
   end
 
   def search

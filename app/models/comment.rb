@@ -1,4 +1,4 @@
 class Comment < ApplicationRecord
-  belongs_to :post  # tweetsテーブルとのアソシエーション
-  belongs_to :user  # usersテーブルとのアソシエーション
+  belongs_to :user
+  belongs_to :post
 end

@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   root "posts#index"
   resources :users, only: :show
   resources :posts do
-    # resources :comments, only: :create
+    #コメント機能
+    resources :comments, only: [:create, :destroy]
     #いいね機能
     resources :likes, only: [:create, :destroy]
     collection do
