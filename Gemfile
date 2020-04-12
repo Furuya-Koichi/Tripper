@@ -72,3 +72,5 @@ gem "omniauth-rails_csrf_protection"
 group :production do
   gem 'pg'
 end
+
+gem 'rails_12factor', group: :production
