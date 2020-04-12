@@ -68,3 +68,7 @@ end
 #SNS認証
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
+
+group :production do
+  gem 'pg'
+end
