@@ -29,7 +29,7 @@
 ○ haml/sass  
 ○ MySQL  
 ○ Github  
-
+○ Heroku
 # 使用したgem
 ○ 新規登録、ログイン時のSNS認証:　 'omniauth-google-oauth2',  "omniauth-rails_csrf_protection"  
 ○ 認証機能: 'devise'  
