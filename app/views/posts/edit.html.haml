@@ -4,7 +4,8 @@
     = form_for [@post] do |f|
       .form__mask
         = f.label :image, class: 'form__mask__image' do
-          = f.file_field :image, class: 'hidden'
+          = f.fields_for :images do |i|#画像複数投稿
+            = i.file_field :image_url
       = f.text_field :country, class: 'form__country', placeholder: '旅行先'
       = f.select :travelexpense, [['~9999', '~9999'], ['10000~19999', '10000~19999'], ['20000~29999', '20000~29999'], ['30000~39999', '30000~39999'], ['40000~49999', '40000~49999'], ['50000~59999', '50000~59999'], ['60000~69999', '60000~69999'], ['70000~79999', '70000~79999'], ['80000~89999', '80000~89999'], ['90000~99999', '90000~99999'], ['100000~', '100000~']], prompt: "旅行費を選択してください"
       = f.text_field :content, class: 'form__message', placeholder: '旅行の思い出'

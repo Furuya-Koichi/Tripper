@@ -22,7 +22,7 @@
       .contents__country
         %a
           = post.country
-      = image_tag post.image
+      = image_tag post.images.first.image_url.to_s unless post.images.blank?
       .undercontents
         .undercontentsupper
           .counts

@@ -5,7 +5,7 @@
       .uppercontents
         .uppercontents__usericon
           %text
-          -# = post.user.name
+          = post.user.name
         .uppercontents__more
           .menubar
             %label
@@ -21,7 +21,7 @@
                     = link_to '削除', "/posts/#{post.id}", method: :delete
       .contents__country
         = post.country
-      = image_tag post.image.url
+      = image_tag post.images.first.image_url.to_s unless post.images.blank?
       .undercontents
         .undercontentsupper
           .counts

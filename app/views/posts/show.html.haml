@@ -20,7 +20,7 @@
     .contents__country
       %a
         = @post.country
-    = image_tag @post.image
+    = image_tag @post.images.first.image_url.to_s unless @post.images.blank?
     .undercontents
       .undercontentsupper
         .counts
@@ -59,10 +59,10 @@
               = comment.content
           .inner__time
             = comment.created_at.strftime("%Y-%m-%d")
-    .contentscommments__form
-      = form_for [@post, @comment] do |f|
-        = f.text_field :content, placeholder: 'コメントを追加'
-        %br= f.submit 'コメントする', class: 'commentbtn'
+      .contentscommments__form
+        = form_for [@post, @comment] do |f|
+          = f.text_field :content, placeholder: 'コメントを追加'
+          %br= f.submit 'コメントする', class: 'commentbtn'
 
 
 
