@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def new
     # binding.pry
     @post = Post.new
-    @post.images.new
+    @post.images.build
   end
 
   def create
