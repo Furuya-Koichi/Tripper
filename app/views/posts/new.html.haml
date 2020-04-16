@@ -5,12 +5,12 @@
       .form__mask
         .form__mask__image
           #image-box-1
-            .item-num-0#image-box__container
-              = f.fields_for :images do |i|
-                .input-area
-                  = i.file_field :image_url, type: 'file', name: "post[images_attributes][][image_url]", value:"", style: "display:none", id:"img-file"
+            .post-num-0#image-box__container
+              .input-area
+                = f.fields_for :images do |i|
                   %label{for: "img-file"}
                     %i.fas.fa-camera
+                  = i.file_field :image_url, type: 'file', name: "post[images_attributes][][image_url]", value:"", style: "display:none", id:"img-file"
         -# = f.label :image, class: 'form__mask__image' do
           -# = f.fields_for :images do |i|#画像複数投稿
           -#   = i.file_field :image_url
