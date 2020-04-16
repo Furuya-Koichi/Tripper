@@ -22,12 +22,12 @@ URL:https://newtripper.herokuapp.com/
 ○ 投稿検索機能  
 ○ マイページ閲覧機能  
 ○ いいね機能  
-○ コメント機能
+○ コメント機能  
 ○ slick
 # 開発環境
 ○ Ruby on Rails  
 ○ haml/sass 
-○ javascript  
+○ javascript    
 ○ MySQL  
 ○ Github  
 ○ Heroku
@@ -36,7 +36,7 @@ URL:https://newtripper.herokuapp.com/
 ○ 認証機能: 'devise'  
 ○ 画像投稿: 'carrierwave', 'mini_magick'  
 ○ haml導入: 'haml-rails'  
-○ フォントデザイン： 'font-awesome-sass'
+○ フォントデザイン： 'font-awesome-sass'  
 ○ jQuery: jquery-rails, jquery-ui-rails  
 # DB構造
 <img width="1044" alt="スクリーンショット 2020-04-10 23 31 31" src="https://user-images.githubusercontent.com/57896659/78998740-3434da80-7b84-11ea-97c6-01073772e017.png">
