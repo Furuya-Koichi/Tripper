@@ -21,8 +21,9 @@
                     = link_to '削除', "/posts/#{post.id}", method: :delete
       .contents__country
         = post.country
-      - post.images.each do |image|
-        = image_tag image.image_url
+        .slider
+          - post.images.each do |image|
+            = image_tag image.image_url
       .undercontents
         .undercontentsupper
           .counts

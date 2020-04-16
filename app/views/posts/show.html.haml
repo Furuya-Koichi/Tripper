@@ -20,8 +20,9 @@
     .contents__country
       %a
         = @post.country
-      - @post.images.each do |image|
-        = image_tag image.image_url
+      .slider
+        - @post.images.each do |image|
+          = image_tag image.image_url
     .undercontents
       .undercontentsupper
         .counts
