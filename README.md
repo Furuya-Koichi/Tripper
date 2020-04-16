@@ -17,7 +17,7 @@ URL:https://newtripper.herokuapp.com/
 ○ 新規登録・ログイン機能  
 ○（新規登録・ログイン機能時におけるGoogleでのSNS認証（FacebookでのSNS認証も実装済みだが、API側のビジネス認証がまだできていないため、使用はもう少々お待ちください。）  
 ○ テキストの投稿機能  
-○ 画像複数投稿機能
+○ 画像複数投稿機能  
 ○ 投稿の削除機能  
 ○ 投稿検索機能  
 ○ マイページ閲覧機能  
@@ -26,7 +26,7 @@ URL:https://newtripper.herokuapp.com/
 ○ slick
 # 開発環境
 ○ Ruby on Rails  
-○ haml/sass 
+○ haml/sass  
 ○ javascript    
 ○ MySQL  
 ○ Github  
