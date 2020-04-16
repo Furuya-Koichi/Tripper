@@ -1,6 +1,6 @@
 .contentswrapper
   margin: auto 0px
-  display: flex
+  position: relative
   .contents
     background-color: #efefef
     height: 846px
@@ -59,7 +59,7 @@
         font-size: 30px
         margin-left: 5px
       input:checked ~ ul
-        height: 90px
+        height: 60px
       &__usericon
         width: 60px
         height: 60px
@@ -105,53 +105,50 @@
     border: 1px solid #e1dfe2
     height: 600px
     width: 400px
-    margin-top: 50px
-    margin-left: 50px
+    margin: 50px 180px 50px 50px
     box-shadow:  0 4px 6px rgba(146, 146, 146, 0.8)
     display: inline-block
     padding: 10px 0px 0px 20px
-    &__show
-      height: 200px
-      .title
-        padding: 15px
-        font-size: 25px
-        
-      .inner
-        overflow: scroll
-        height: 250px
-        margin-bottom: 10px
-        &__time
-          font-size: 5px
-          padding-bottom: 20px
-          margin-left: 8px
-        a
-          text-decoration: none
-        .innerupper
-          display: flex
-          padding-bottom: 5px
-          &__name
-          &__content
+    float: right
 
     &__form
-      display: inline-block
-      margin-top: 150px
-      input
-        width: 350px
-        height: 90px
-      .commentbtn
-        width: 100px
+      margin-top: 50px
+    &__show
         height: 100px
-        margin-top: 30px
-        border-radius: 50%
-        text-align: center
-        text-decoration: none
-        background-color: skyblue
-        color: white
-        cursor: pointer
-        box-shadow:  0 4px 8px rgba(146, 146, 146, 0.8)
-        display: inline-block
-        margin-left: 140px
-        font-size: 15px
+        .title
+          padding: 15px
+          font-size: 25px
+        .inner
+          overflow: scroll
+          height: 250px
+          &__time
+            font-size: 5px
+            padding-bottom: 20px
+            margin-left: 8px
+          a
+            text-decoration: none
+          .innerupper
+            display: flex
+            padding-bottom: 5px
+            &__name
+            &__content
+        input 
+          width: 350px
+          height: 80px
+        .commentbtn
+          width: 100px
+          height: 100px
+          margin-top: 20px
+          border-radius: 50%
+          text-align: center
+          text-decoration: none
+          background-color: skyblue
+          color: white
+          cursor: pointer
+          box-shadow:  0 4px 8px rgba(146, 146, 146, 0.8)
+          margin-left: 140px
+          font-size: 15px
+
 
 
 

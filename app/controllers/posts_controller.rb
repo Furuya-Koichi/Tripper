@@ -5,11 +5,12 @@ class PostsController < ApplicationController
   end
 
   def new
+    # binding.pry
     @post = Post.new
+    @post.images.build
   end
 
   def create
-    # binding.pry
     Post.create(post_params)
     redirect_to root_path
   end
@@ -45,7 +46,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:name, :content, :image, :country, :travelexpense).merge(user_id: current_user.id)
+    params.require(:post).permit(:name, :content, :country, :travelexpense, images_attributes: [:image_url, :_destroy, :id]).merge(user_id: current_user.id)
   end
 
 end

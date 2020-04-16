@@ -13,14 +13,16 @@
             %input.acordion{:id => "list", :type => "checkbox"}
             %ul
               - if user_signed_in? && current_user.id == @post.user_id
-                %li
-                  = link_to '編集', "/posts/#{@post.id}/edit", method: :get
+                -# %li
+                -#   = link_to '編集', "/posts/#{@post.id}/edit", method: :get
                 %li
                   = link_to '削除', "/posts/#{@post.id}", method: :delete
     .contents__country
       %a
         = @post.country
-    = image_tag @post.image
+      .slider
+        - @post.images.each do |image|
+          = image_tag image.image_url
     .undercontents
       .undercontentsupper
         .counts
@@ -59,10 +61,10 @@
               = comment.content
           .inner__time
             = comment.created_at.strftime("%Y-%m-%d")
-    .contentscommments__form
-      = form_for [@post, @comment] do |f|
-        = f.text_field :content, placeholder: 'コメントを追加'
-        %br= f.submit 'コメントする', class: 'commentbtn'
+      .contentscommments__form
+        = form_for [@post, @comment] do |f|
+          = f.text_field :content, placeholder: 'コメントを追加'
+          %br= f.submit 'コメントする', class: 'commentbtn'
 
 
 
