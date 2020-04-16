@@ -20,7 +20,8 @@
                   %li
                     = link_to '削除', "/posts/#{post.id}", method: :delete
       .contents__country
-        = post.country
+        %a
+          = post.country
         .slider
           - post.images.each do |image|
             = image_tag image.image_url
