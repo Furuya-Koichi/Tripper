@@ -11,9 +11,16 @@
                   %label{for: "img-file"}
                     %i.fas.fa-camera
                   = i.file_field :image_url, type: 'file', name: "post[images_attributes][][image_url]", value:"", style: "display:none", id:"img-file"
-      = f.text_field :country, class: 'form__country', placeholder: '旅行先'
-      = f.date_field :tdate, class: 'form__startdate'
-      = f.date_field :fdate, class: 'form__finishdate'
+        .form__mask__country
+          %a
+            旅行先
+        = f.text_field :country, class: 'form__country'
+        .form__mask__date
+          %a
+            旅行期間
+        = f.date_field :tdate, class: 'form__startdate'
+        〜
+        = f.date_field :fdate, class: 'form__finishdate'
       = f.select :travelexpense, [['~9999', '~9999'], ['10000~19999', '10000~19999'], ['20000~29999', '20000~29999'], ['30000~39999', '30000~39999'], ['40000~49999', '40000~49999'], ['50000~59999', '50000~59999'], ['60000~69999', '60000~69999'], ['70000~79999', '70000~79999'], ['80000~89999', '80000~89999'], ['90000~99999', '90000~99999'], ['100000~', '100000~']], prompt: "旅行費を選択してください"
       = f.text_field :content, class: 'form__message', placeholder: '旅行の思い出'
       = f.submit 'Send', class: 'form__submit'
