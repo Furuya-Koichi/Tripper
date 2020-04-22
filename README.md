@@ -1,7 +1,7 @@
 # SNS型旅行共有アプリ（Tripper）について
 <img width="1279" alt="スクリーンショット 2020-04-14 18 13 33" src="https://user-images.githubusercontent.com/57896659/79207502-bae70180-7e7b-11ea-94e2-1c4c6f8db72f.png">
 
-<img width="1280" alt="スクリーンショット 2020-04-11 19 08 47" src="https://user-images.githubusercontent.com/57896659/79041091-fab5ab00-7c27-11ea-8823-14056e59e826.png">  
+<img width="1279" alt="スクリーンショット 2020-04-22 21 48 54" src="https://user-images.githubusercontent.com/57896659/79983776-2ddb2280-84e3-11ea-9ee6-485f4fe1b2a9.png"> 
 
 URL:https://newtripper.herokuapp.com/
 
