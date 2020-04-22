@@ -39,4 +39,4 @@ URL:https://newtripper.herokuapp.com/
 ○ フォントデザイン： 'font-awesome-sass'  
 ○ jQuery: jquery-rails, jquery-ui-rails  
 # DB構造
-<img width="1044" alt="スクリーンショット 2020-04-10 23 31 31" src="https://user-images.githubusercontent.com/57896659/78998740-3434da80-7b84-11ea-97c6-01073772e017.png">
+<img width="932" alt="スクリーンショット 2020-04-22 21 45 09" src="https://user-images.githubusercontent.com/57896659/79983849-4d724b00-84e3-11ea-8c6c-bbb271cd063c.png">
