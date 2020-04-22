@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200420144346) do
+ActiveRecord::Schema.define(version: 20200422122459) do
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "content"
@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(version: 20200420144346) do
     t.integer  "user_id"
     t.string   "country"
     t.string   "travelexpense"
-    t.date     "tdate"
     t.date     "fdate"
+    t.date     "tdate"
   end
 
   create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
