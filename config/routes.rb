@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   }
 
   root "posts#index"
-  resources :users, only: :show
+  resources :users, only: [:edit, :update, :show]
   resources :posts do
     #コメント機能
     resources :comments, only: [:create, :destroy]

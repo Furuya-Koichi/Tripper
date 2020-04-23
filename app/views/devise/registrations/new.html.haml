@@ -3,9 +3,11 @@
     %h1 Tripperへようこそ
     %br 
       %h2 あなたの旅行が誰かの旅行を有意義にする。　　　　　そんな体験をぜひしてみましょう。
+    .login
+      = render "devise/shared/links"
+      = link_to "トップページに戻る", root_path
   #account-page.newaccount-page
     %h2 Create Account
-    -# = render "devise/shared/links"
     .newaccount-page__inner
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         = devise_error_messages!

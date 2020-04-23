@@ -3,11 +3,13 @@
     %h1 Tripperへようこそ
     %br 
       %h2 あなたの旅行が誰かの旅行を有意義にする。　　　　　そんな体験をぜひしてみましょう。
+    .signup
+      = render "devise/shared/links"
+      = link_to "トップページに戻る", root_path
   #account-page.account-page
     .account-page__upper
       %h2 Log in
       -# %h5 登録しているユーザーでログイン
-      -# = render "devise/shared/links"
     .account-page__inner
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field
