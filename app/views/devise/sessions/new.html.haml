@@ -3,9 +3,11 @@
     %h1 Tripperへようこそ
     %br 
       %h2 あなたの旅行が誰かの旅行を有意義にする。　　　　　そんな体験をぜひしてみましょう。
-    .signup
-      = render "devise/shared/links"
-      = link_to "トップページに戻る", root_path
+    .leftbtn
+      .leftbtn__signup
+        = link_to "新規登録", "/users/sign_up"
+      .leftbtn__toppage
+        = link_to "トップページに戻る", root_path
   #account-page.account-page
     .account-page__upper
       %h2 Log in
